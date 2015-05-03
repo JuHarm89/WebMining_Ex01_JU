@@ -52,7 +52,8 @@ public class WordExtractorServiceImpl implements WordExtractorService{
 	}
 	
 	private String[] parseWords(String fileContent){
-		return fileContent.split("(?<!\\w)'|[\\s,.?\"!][\\s,.?\"'!]*");
+		return fileContent.split("(^['-]|['-]$|['-]\\W+|[^\\w'-]\\W*)");
+		
 		
 	}
 	

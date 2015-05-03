@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import view.LogarithmicNumberAxis?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="782.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TableView fx:id="wordsTable" layoutX="188.0" layoutY="19.0" prefHeight="358.0" prefWidth="277.0">
+      <TableView fx:id="wordsTable" layoutX="188.0" layoutY="19.0" prefHeight="713.0" prefWidth="286.0">
         <columns>
-          <TableColumn fx:id="wordContentColumn" prefWidth="145.0" text="Word" />
-          <TableColumn fx:id="amountColumn" prefWidth="67.0" text="Frequenzy" />
-            <TableColumn fx:id="stopWordColumn" minWidth="0.0" prefWidth="64.0" text="StopWord" />
+          <TableColumn fx:id="wordContentColumn" prefWidth="121.0" text="Word" />
+          <TableColumn fx:id="amountColumn" prefWidth="81.0" text="Frequenzy" />
+            <TableColumn fx:id="stopWordColumn" minWidth="0.0" prefWidth="83.0" text="StopWord" />
         </columns>
       </TableView>
       <Button fx:id="extractBtn" layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#clickExtractBtn" text="Extract" />
       <CheckBox fx:id="excludeCheckBox" layoutX="14.0" layoutY="60.0" mnemonicParsing="false" text="Exclude Stop Words" />
+      <LineChart fx:id="frequenzyLineChart" layoutX="480.0" layoutY="18.0" prefHeight="358.0" prefWidth="407.0">
+        <xAxis>
+          <LogarithmicNumberAxis label="Rang" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <LogarithmicNumberAxis label="Häufigkeiten" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <ScatterChart fx:id="frequenzyScatterChart" layoutX="474.0" layoutY="396.0" prefHeight="358.0" prefWidth="422.0">
+        <xAxis>
+          <LogarithmicNumberAxis label="Rang" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <LogarithmicNumberAxis label="Häufigkeit" prefHeight="296.0" prefWidth="63.0" side="LEFT"/>
+        </yAxis>
+      </ScatterChart>
    </children>
 </AnchorPane>
