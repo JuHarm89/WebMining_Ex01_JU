@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="wordsTable" layoutX="188.0" layoutY="19.0" prefHeight="358.0" prefWidth="277.0">
+        <columns>
+          <TableColumn fx:id="wordContentColumn" prefWidth="104.0" text="Word" />
+          <TableColumn fx:id="amountColumn" prefWidth="100.0" text="Frequenzy" />
+            <TableColumn minWidth="0.0" prefWidth="72.0" text="StopWord" />
+        </columns>
+      </TableView>
+      <Button fx:id="extractBtn" layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#clickExtractBtn" text="Extract" />
+      <CheckBox layoutX="14.0" layoutY="60.0" mnemonicParsing="false" text="Exclude Stop Words" />
+   </children>
+</AnchorPane>
